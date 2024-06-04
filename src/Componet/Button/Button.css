@@ -1,0 +1,194 @@
+.button--telesto {
+    overflow: hidden;
+    color: #fff !important;
+    background: white;
+    /* Updated background color to match the image */
+    border-radius: 50px;
+    /* Rounded corners to match the button shape */
+    padding: 0.5rem 2rem;
+    /* Padding adjusted for better proportions */
+    border: none;
+    /* Remove border */
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    font-family: "Urbanist", sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    transition: none;
+    /* Remove transition to prevent background change */
+}
+
+.button--telesto span {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.button--telesto>span {
+    overflow: hidden;
+}
+
+/* .button--telesto:hover > span > span {
+    animation: MoveRightInitial 0.1s forwards, MoveRightEnd 0.3s forwards 0.2s;
+} */
+.button--telesto .leter_rotate span {
+    transition: transform 0.5s ease-in-out;
+}
+
+.button--telesto:hover .leter_rotate span {
+    animation: gt-spin 1s forwards;
+}
+
+@keyframes gt-spin {
+    0% {
+        transform: rotate(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(359deg);
+        opacity: 1;
+    }
+}
+
+/* Apply animation delays to each letter */
+.button--telesto:hover .leter_rotate span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.button--telesto:hover .leter_rotate span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.button--telesto:hover .leter_rotate span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.button--telesto:hover .leter_rotate span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.button--telesto:hover .leter_rotate span:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.button--telesto:hover .leter_rotate span:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.button--telesto:hover .leter_rotate span:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.button--telesto:hover .leter_rotate span:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.button--telesto:hover .leter_rotate span:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+.button--telesto:hover .leter_rotate span:nth-child(10) {
+    animation-delay: 1s;
+}
+
+.button--telesto:hover .leter_rotate span:nth-child(11) {
+    animation-delay: 1.1s;
+}
+
+/* Add more nth-child selectors for additional letters */
+
+@keyframes MoveRightInitial {
+    to {
+        transform: translate3d(105%, 0, 0);
+    }
+}
+
+@keyframes MoveRightEnd {
+    from {
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.button--telesto::before,
+.button--telesto::after {
+    content: '';
+    background: #5b00f0;
+    /* Keep the same background color */
+}
+
+.button--telesto::before {
+    width: 135%;
+    transform: translate3d(-100%, 0, 0);
+    background: #5b00f0;
+    /* Ensure color doesn't change on hover */
+}
+
+.button--telesto:hover::before {
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.3s;
+    border-radius: 50px;
+}
+
+.button--telesto::after {
+    width: 105%;
+    transform: translate3d(100%, 0, 0);
+    transition: transform 1s cubic-bezier(0.7, 0, 0.2, 1);
+    border-radius: 50px;
+}
+
+.button--telesto:hover::after {
+    transform: translate3d(0, 0, 0);
+    border-radius: 50px;
+    transition: transform 0.01s 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.content__item {
+    list-style-type: none;
+}
+
+.content__item::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.button {
+    pointer-events: auto;
+    cursor: pointer;
+    background: #363539;
+    border: none;
+    padding: 17px 40px 17px 40px;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.button::before,
+.button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width:770px) {
+
+    .button {
+        padding: 15px 30px 15px 30px;
+    }
+
+    .button--telesto {
+        font-size: 16px;
+    }
+}
