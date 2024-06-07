@@ -7,8 +7,8 @@ import { IoIosLink } from 'react-icons/io';
 const Card = ({ Travel_card }) => {
     return (
         <>
-            <div className="border-0 car position-relative" data-aos="fade-up"
-                data-aos-duration="2000">
+            <div className="border-0 car position-relative" data-aos="flip-left"
+                data-aos-duration="1500">
                 <div className='card_img position-relative'>
                     <div className='italy_img'>
                         <img src={Travel_card.img} className="card-img-top w-100 overflow-hidden" />

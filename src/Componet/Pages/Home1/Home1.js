@@ -203,25 +203,25 @@ const Home1 = () => {
                                     <p className='travel_exp black_color text-center text-lg-start urbanist mb-5' data-aos="zoom-in-right">Get the Best Travel Experience</p>
                                 </div>
                                 <div className='d-flex gap-4 mb-5 mb-md-4 air_hover_animation justify-content-center justify-content-md-between align-items-center ms-0 ms-md-3'>
-                                    <div className='bg-white d-flex justify-content-center align-items-center plan_icon'>
+                                    <div className='bg-white d-flex justify-content-center align-items-center plan_icon' data-aos="fade-right" >
                                         <img src={airplane} alt="" />
                                     </div>
-                                    <div>
+                                    <div data-aos="fade-left">
                                         <h3 className='black_color urbanist hotel fw-bold m-0'>Best of Hotel</h3>
                                         <p className='black_color urbanist hotel_Info'>We don’t just work with concrete and steel. We work We are Approachable, with even our highest</p>
                                     </div>
                                 </div>
                                 <div className='d-flex mb-5 mb-md-4 gap-4 air_hover_animation justify-content-center justify-content-md-between  align-items-center ms-0 ms-md-3'>
-                                    <div className='bg-white d-flex justify-content-center align-items-center plan_icon'>
+                                    <div className='bg-white d-flex justify-content-center align-items-center plan_icon' data-aos="fade-right">
                                         <img src={earth} alt="" />
                                     </div>
-                                    <div>
+                                    <div data-aos="fade-left">
                                         <h3 className='black_color urbanist hotel fw-bold'>Friendly price</h3>
                                         <p className='black_color urbanist hotel_Info'>We don’t just work with concrete and steel. We work We are Approachable, with even our highest</p>
                                     </div>
                                 </div>
                                 <div className='d-block d-md-flex gap-2 ms-3 align-items-center'>
-                                    <div className='mb-3 mb-md-0 text-center text-md-start'>
+                                    <div className='mb-3 mb-md-0 text-center text-md-start' data-aos="flip-up">
                                         <Button />
                                     </div>
                                     <div>
@@ -248,21 +248,21 @@ const Home1 = () => {
                             <div className='col-lg-6'>
                                 <div className='row'>
                                     <div className='col-md-6 col-12 places'>
-                                        <div className='wc_img_1 wc_1 position-relative'>
+                                        <div className='wc_img_1 wc_1 position-relative' data-aos="fade-up-right" data-aos-duration="2000">
                                             <img src={wc_1} alt="" />
                                             <span>America</span>
                                         </div>
-                                        <div className='wc_img_1 wc_3 mb-4 mb-lg-0 position-relative'>
+                                        <div className='wc_img_1 wc_3 mb-4 mb-lg-0 position-relative' data-aos="fade-up-left" data-aos-duration="2000">
                                             <img src={wc_2} alt="" />
                                             <span>Asia</span>
                                         </div>
                                     </div>
                                     <div className='col-md-6 col-12 places'>
-                                        <div className='wc_img_1 wc_2 position-relative'>
+                                        <div className='wc_img_1 wc_2 position-relative' data-aos="fade-up-right" data-aos-duration="2000">
                                             <img src={wc_3} alt="" />
                                             <span>Africa</span>
                                         </div>
-                                        <div className='wc_img_1 wc_4 position-relative'>
+                                        <div className='wc_img_1 wc_4 position-relative' data-aos="fade-up-left" data-aos-duration="2000">
                                             <img src={wc_4} alt="" />
                                             <span>Europe</span>
                                         </div>
@@ -279,7 +279,7 @@ const Home1 = () => {
                     <div className='row'>
                         <div className='col-lg-6'>
                             <div className='text-center mb-5'>
-                                <div className='mobil_main text-center position-relative'>
+                                <div className='mobil_main text-center position-relative' data-aos="fade-up" data-aos-duration="1500">
                                     <div className='img_animation'>
                                         <img src={mobile} className='w-100' alt="" />
                                     </div>
@@ -294,20 +294,20 @@ const Home1 = () => {
                                 <div className='d-flex kown'>
                                     <Kown />
                                 </div>
-                                <p className='offer black_color urbanist'>Get 5% off on your
+                                <p className='offer black_color urbanist' data-aos="zoom-in-up">Get 5% off on your
                                     First app booking
                                     Travel with us</p>
-                                <p className='black_color urbanist mb-5 dummy'>We don’t just work with concrete and steel. We work with peopleWe are
+                                <p className='black_color urbanist mb-5 dummy' data-aos="flip-down">We don’t just work with concrete and steel. We work with peopleWe are
                                     Approachable, with even our highest work work with concrete and steel. We work with people</p>
                                 <ul className='d-flex gap-2 m-0 mb-5 justify-content-between align-items-center p-0 wow_words_main'>
                                     <div className='w-50 li_center'>
-                                        <li className='mb-2'>
+                                        <li className='mb-2' data-aos="fade-right">
                                             <div className='d-flex align-items-center'>
                                                 <span><FaCheckCircle color='blue' className='fs-4 me-3' /></span>
                                                 <span className='fw-bold  urbanist fs-5'>Generation Technology</span>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li data-aos="fade-left">
                                             <div className='d-flex align-items-center'>
                                                 <span><FaCheckCircle color='blue' className='fs-4 me-3' /></span>
                                                 <span className='fw-bold  urbanist fs-5'>Generation Technology</span>
@@ -315,13 +315,13 @@ const Home1 = () => {
                                         </li>
                                     </div>
                                     <div className='w-50 li_center'>
-                                        <li className='mb-2'>
+                                        <li className='mb-2' data-aos="fade-right">
                                             <div className='d-flex align-items-center'>
                                                 <span><FaCheckCircle color='blue' className='fs-4 me-3' /></span>
                                                 <span className='fw-bold  urbanist fs-5'>Audio Performance</span>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li data-aos="fade-left">
                                             <div className='d-flex align-items-center'>
                                                 <span><FaCheckCircle color='blue' className='fs-4 me-3' /></span>
                                                 <span className='fw-bold  urbanist fs-5'>Audio Performance</span>
@@ -351,10 +351,10 @@ const Home1 = () => {
                             <div className='kown_us'>
                                 <Kown />
                             </div>
-                            <p className='explore black_color urbanist'>Chose Your Favourite Date To Explore</p>
+                            <p className='explore black_color urbanist' data-aos="flip-left" data-aos-duration="2000">Chose Your Favourite Date To Explore</p>
                         </div>
                         <div className='col-lg-6'>
-                            <p className='dummy_text urbanist black_color'>We don’t just work with concrete and steel. We work people We are Approachable, with even our highest work work with concrete and steel. We work with people</p>
+                            <p className='dummy_text urbanist black_color'  data-aos="flip-right" data-aos-duration="2000">We don’t just work with concrete and steel. We work people We are Approachable, with even our highest work work with concrete and steel. We work with people</p>
                         </div>
                     </div>
                 </div>

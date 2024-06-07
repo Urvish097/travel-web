@@ -2,9 +2,9 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home1 from './Componet/Pages/Home1/Home1';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-AOS.init();
+  import AOS from 'aos';
+  import 'aos/dist/aos.css';
+  AOS.init();
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
