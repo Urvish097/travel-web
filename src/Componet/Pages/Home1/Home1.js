@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import shape from '../../Images/shape-1.webp';
 import './Home1.css';
 import Kown from '../../Known_us/Kown';
@@ -6,7 +6,7 @@ import banner from '../../Images/banner_img_1.webp';
 import banner2 from '../../Images/banner-1.webp';
 import Header from "../../Header/Header"
 import Button from '../../Button/Button';
-import { FaCalendarAlt, FaCheckCircle, FaPlay, FaSwimmer } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, FaCalendarAlt, FaCheckCircle, FaPlay, FaSwimmer } from "react-icons/fa";
 import { IoAirplane, IoLocationSharp } from 'react-icons/io5';
 import { IoIosSearch } from 'react-icons/io';
 import Card from '../../Card/Card';
@@ -26,8 +26,50 @@ import girl_boy from '../../Images/ab1.webp';
 import playstore from '../../Images/g-play.webp';
 import appstore from '../../Images/app.webp';
 import { Link } from 'react-router-dom';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import slider_img from '../../Images/pv1.webp';
+import slider_img2 from '../../Images/pv2.webp';
+import slider_img3 from '../../Images/pv3.webp';
+import slider_img4 from '../../Images/pv5.webp';
+import { FaArrowLeftLong } from 'react-icons/fa6';
+
 
 const Home1 = () => {
+
+    const progressBarRef = useRef(null);
+    const sliderRef = useRef(null);
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const totalSlides = 4;
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        autoplaySpeed: 3000,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        pauseOnHover: false,
+        afterChange: (index) => {
+            setCurrentSlide(index);
+            resetProgressBar();
+        }
+    };
+
+    const resetProgressBar = () => {
+        const progressBar = progressBarRef.current;
+        if (progressBar) {
+            progressBar.style.animation = 'none';
+            void progressBar.offsetHeight;
+            progressBar.style.animation = null;
+        }
+    };
+
+    useEffect(() => {
+        resetProgressBar();
+    }, []);
+
 
     return (
         <>
@@ -231,6 +273,7 @@ const Home1 = () => {
                     </div>
                 </div>
             </section>
+
             <section className='sec_4'>
                 <div className='container'>
                     <div className='row'>
@@ -249,7 +292,7 @@ const Home1 = () => {
                         <div className='col-lg-6'>
                             <div>
                                 <div className='d-flex kown'>
-                                <Kown />
+                                    <Kown />
                                 </div>
                                 <p className='offer black_color urbanist'>Get 5% off on your
                                     First app booking
@@ -300,6 +343,78 @@ const Home1 = () => {
                     </div>
                 </div>
             </section >
+
+            <section className='sec_5'>
+                <div className='container'>
+                    <div className='row align-items-center mb-4'>
+                        <div className='col-lg-6'>
+                            <div className='kown_us'>
+                                <Kown />
+                            </div>
+                            <p className='explore black_color urbanist'>Chose Your Favourite Date To Explore</p>
+                        </div>
+                        <div className='col-lg-6'>
+                            <p className='dummy_text urbanist black_color'>We don’t just work with concrete and steel. We work people We are Approachable, with even our highest work work with concrete and steel. We work with people</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='position-relative'>
+                    <div className='position-relative slider_main'>
+                        <Slider ref={sliderRef} {...settings}>
+                            <div>
+                                <img className='w-100' src={slider_img} alt="" />
+                            </div>
+                            <div>
+                                <img className='w-100' src={slider_img2} alt="" />
+                            </div>
+                            <div>
+                                <img className='w-100' src={slider_img3} alt="" />
+                            </div>
+                            <div>
+                                <img className='w-100' src={slider_img4} alt="" />
+                            </div>
+                        </Slider>
+                        <div className='container-lg container-fluid position-relative'>
+                            <div className='photo_view'>
+                                <div className='d-flex photo_view_inner flex-wrap align-items-center justify-content-between'>
+                                    <div className='inner_1'>
+                                        <h3 className='urbanist'>Famous Photo Gallery</h3>
+                                        <p className='urbanist'>Click Photo To Large</p>
+                                    </div>
+                                    <div className='animation_loading me-5 d-none d-lg-block'>
+                                        <div className='progres_bar' ref={progressBarRef}></div>
+                                    </div>
+                                    <div className='slide-counter text-white fw-bold fs-5 d-none d-md-block'>
+                                        {String(currentSlide + 1).padStart(2, '0')} / {String(totalSlides).padStart(2, '0')}
+                                    </div>
+                                    <div>
+                                        <button
+                                            type="button"
+                                            className="slick_prev btn btn-light me-3"
+                                            onClick={() => sliderRef.current.slickPrev()}
+                                        >
+                                            <FaArrowLeft />
+                                        </button>
+                                        <button
+                                            type="button"
+                                            className="slick_next btn btn-light"
+                                            onClick={() => sliderRef.current.slickNext()}
+                                        >
+                                            <FaArrowRight />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                
+            </section>
+
         </>
     )
 }
