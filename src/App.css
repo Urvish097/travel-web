@@ -16,6 +16,12 @@
   background-color: #5b00f0;
 }
 
+body {
+
+  overflow-x: hidden;
+
+}
+
 .urbanist {
   font-family: "Urbanist", sans-serif;
   font-optical-sizing: auto;
@@ -42,6 +48,6 @@ html {
   scrollbar-color: #5b00f0 #f1f1f1;
 }
 
-.sec_2{
+.sec_2 {
   padding: 40px 0px;
 }
