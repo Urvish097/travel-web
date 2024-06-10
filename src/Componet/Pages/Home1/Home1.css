@@ -974,3 +974,19 @@
         font-size: 20px;
     }
 }
+
+/* *****************sec_6******** */
+
+.sec_6{
+    padding: 50px 0px;
+}
+
+.ReactModal__Overlay {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.ReactModal__Content {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}

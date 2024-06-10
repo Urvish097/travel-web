@@ -7,7 +7,7 @@ import banner2 from '../../Images/banner-1.webp';
 import Header from "../../Header/Header"
 import Button from '../../Button/Button';
 import { FaArrowLeft, FaArrowRight, FaCalendarAlt, FaCheckCircle, FaPlay, FaSwimmer } from "react-icons/fa";
-import { IoAirplane, IoLocationSharp } from 'react-icons/io5';
+import { IoAirplane, IoClose, IoLocationSharp } from 'react-icons/io5';
 import { IoIosSearch } from 'react-icons/io';
 import Card from '../../Card/Card';
 import { Travel_card } from '../../Data/Data';
@@ -34,6 +34,8 @@ import slider_img2 from '../../Images/pv2.webp';
 import slider_img3 from '../../Images/pv3.webp';
 import slider_img4 from '../../Images/pv5.webp';
 import { FaArrowLeftLong } from 'react-icons/fa6';
+import dubai_2 from '../../Images/ft1.webp';
+import Modal from 'react-modal';
 
 
 const Home1 = () => {
@@ -42,6 +44,8 @@ const Home1 = () => {
     const sliderRef = useRef(null);
     const [currentSlide, setCurrentSlide] = useState(0);
     const totalSlides = 4;
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null);
 
     const settings = {
         dots: false,
@@ -69,6 +73,16 @@ const Home1 = () => {
     useEffect(() => {
         resetProgressBar();
     }, []);
+
+    const openModal = (image) => {
+        setSelectedImage(image);
+        setModalIsOpen(true);
+    };
+
+    const closeModal = () => {
+        setModalIsOpen(false);
+        setSelectedImage(null);
+    };
 
 
     return (
@@ -354,27 +368,33 @@ const Home1 = () => {
                             <p className='explore black_color urbanist' data-aos="flip-left" data-aos-duration="2000">Chose Your Favourite Date To Explore</p>
                         </div>
                         <div className='col-lg-6'>
-                            <p className='dummy_text urbanist black_color'  data-aos="flip-right" data-aos-duration="2000">We don’t just work with concrete and steel. We work people We are Approachable, with even our highest work work with concrete and steel. We work with people</p>
+                            <p className='dummy_text urbanist black_color' data-aos="flip-right" data-aos-duration="2000">We don’t just work with concrete and steel. We work people We are Approachable, with even our highest work work with concrete and steel. We work with people</p>
                         </div>
                     </div>
                 </div>
 
                 <div className='position-relative'>
                     <div className='position-relative slider_main'>
-                        <Slider ref={sliderRef} {...settings}>
-                            <div>
-                                <img className='w-100' src={slider_img} alt="" />
-                            </div>
-                            <div>
-                                <img className='w-100' src={slider_img2} alt="" />
-                            </div>
-                            <div>
-                                <img className='w-100' src={slider_img3} alt="" />
-                            </div>
-                            <div>
-                                <img className='w-100' src={slider_img4} alt="" />
-                            </div>
-                        </Slider>
+                        <div>
+                            <Slider {...settings}>
+                                <div>
+                                    <img className='w-100' src={slider_img} alt="" onClick={() => openModal(slider_img)} />
+                                </div>
+                                <div>
+                                    <img className='w-100' src={slider_img2} alt="" onClick={() => openModal(slider_img2)} />
+                                </div>
+                                <div>
+                                    <img className='w-100' src={slider_img3} alt="" onClick={() => openModal(slider_img3)} />
+                                </div>
+                                <div>
+                                    <img className='w-100' src={slider_img4} alt="" onClick={() => openModal(slider_img4)} />
+                                </div>
+                            </Slider>
+                            <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Image Modal">
+                                <IoClose onClick={closeModal}className='text-white fs-3'/>
+                                {selectedImage && <img src={selectedImage} alt="Selected" style={{ width: '100%' }} />}
+                            </Modal>
+                        </div>
                         <div className='container-lg container-fluid position-relative'>
                             <div className='photo_view'>
                                 <div className='d-flex photo_view_inner flex-wrap align-items-center justify-content-between'>
@@ -411,9 +431,21 @@ const Home1 = () => {
                 </div>
             </section>
 
-            <section>
-                
-            </section>
+            {/* <section className='sec_6'>
+                <div className='container'>
+                    <div className='row'>
+                        <div className='col-lg-4'>
+
+                        </div>
+                        <div className='col-lg-4'>
+                            <img src={dubai_2} alt="" />
+                        </div>
+                        <div className='col-lg-4'>
+
+                        </div>
+                    </div>
+                </div>
+            </section> */}
 
         </>
     )
