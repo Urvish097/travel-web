@@ -380,20 +380,20 @@ const Home1 = () => {
                         <div>
                             <Slider ref={sliderRef} {...settings}>
                                 <div>
-                                    <img className='w-100' src={slider_img} alt="" onClick={() => openModal(slider_img)}/>
+                                    <img className='w-100' src={slider_img} alt="" onClick={() => openModal(slider_img)} />
                                 </div>
                                 <div>
-                                    <img className='w-100' src={slider_img2} alt="" onClick={() => openModal(slider_img)}/>
+                                    <img className='w-100' src={slider_img2} alt="" onClick={() => openModal(slider_img2)} />
                                 </div>
                                 <div>
-                                    <img className='w-100' src={slider_img3} alt="" onClick={() => openModal(slider_img)}/>
+                                    <img className='w-100' src={slider_img3} alt="" onClick={() => openModal(slider_img3)} />
                                 </div>
                                 <div>
-                                    <img className='w-100' src={slider_img4} alt="" onClick={() => openModal(slider_img)}/>
+                                    <img className='w-100' src={slider_img4} alt="" onClick={() => openModal(slider_img4)} />
                                 </div>
                             </Slider>
                             <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Image Modal">
-                                <IoClose onClick={closeModal} className='text-white fs-3'/>
+                                <IoClose onClick={closeModal} className='text-white fs-3 float-end' />
                                 {selectedImage && <img src={selectedImage} alt="Selected" />}
                             </Modal>
                         </div>
