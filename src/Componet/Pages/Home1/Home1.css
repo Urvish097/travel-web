@@ -743,7 +743,7 @@
     right: -20%;
 }
 
-@media (max-width:522px) {
+@media (max-width:580px) {
     .sec_4 .girl_Img {
         display: none;
     }
@@ -989,4 +989,35 @@
     background-color: transparent !important;
     border: none !important;
     padding: 0 !important;
+}
+   
+.ReactModal__Content img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+}
+
+@media (max-width: 768px) {
+    .ReactModal__Content {
+        max-width: 95%;
+        max-height: 95%;
+        }
+        
+    .ReactModal__Content img {
+        max-height: 70vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .ReactModal__Content {
+        max-width: 100%;
+        inset: 0px !important;
+        top: 30% !important;
+        max-height: 100%;
+        padding: 10px;
+    }
+
+    .ReactModal__Content img {
+        max-height: 60vh;
+    }
 }

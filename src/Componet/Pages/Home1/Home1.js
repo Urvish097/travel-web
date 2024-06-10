@@ -34,7 +34,6 @@ import slider_img2 from '../../Images/pv2.webp';
 import slider_img3 from '../../Images/pv3.webp';
 import slider_img4 from '../../Images/pv5.webp';
 import { FaArrowLeftLong } from 'react-icons/fa6';
-import dubai_2 from '../../Images/ft1.webp';
 import Modal from 'react-modal';
 
 
@@ -44,6 +43,7 @@ const Home1 = () => {
     const sliderRef = useRef(null);
     const [currentSlide, setCurrentSlide] = useState(0);
     const totalSlides = 4;
+
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
 
@@ -77,11 +77,13 @@ const Home1 = () => {
     const openModal = (image) => {
         setSelectedImage(image);
         setModalIsOpen(true);
+        document.body.classList.add('modal-open'); // Disable scrolling
     };
 
     const closeModal = () => {
         setModalIsOpen(false);
         setSelectedImage(null);
+        document.body.classList.remove('modal-open'); // Enable scrolling
     };
 
 
@@ -376,23 +378,23 @@ const Home1 = () => {
                 <div className='position-relative'>
                     <div className='position-relative slider_main'>
                         <div>
-                            <Slider {...settings}>
+                            <Slider ref={sliderRef} {...settings}>
                                 <div>
-                                    <img className='w-100' src={slider_img} alt="" onClick={() => openModal(slider_img)} />
+                                    <img className='w-100' src={slider_img} alt="" onClick={() => openModal(slider_img)}/>
                                 </div>
                                 <div>
-                                    <img className='w-100' src={slider_img2} alt="" onClick={() => openModal(slider_img2)} />
+                                    <img className='w-100' src={slider_img2} alt="" onClick={() => openModal(slider_img)}/>
                                 </div>
                                 <div>
-                                    <img className='w-100' src={slider_img3} alt="" onClick={() => openModal(slider_img3)} />
+                                    <img className='w-100' src={slider_img3} alt="" onClick={() => openModal(slider_img)}/>
                                 </div>
                                 <div>
-                                    <img className='w-100' src={slider_img4} alt="" onClick={() => openModal(slider_img4)} />
+                                    <img className='w-100' src={slider_img4} alt="" onClick={() => openModal(slider_img)}/>
                                 </div>
                             </Slider>
                             <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Image Modal">
-                                <IoClose onClick={closeModal}className='text-white fs-3'/>
-                                {selectedImage && <img src={selectedImage} alt="Selected" style={{ width: '100%' }} />}
+                                <IoClose onClick={closeModal} className='text-white fs-3'/>
+                                {selectedImage && <img src={selectedImage} alt="Selected" />}
                             </Modal>
                         </div>
                         <div className='container-lg container-fluid position-relative'>
@@ -431,21 +433,21 @@ const Home1 = () => {
                 </div>
             </section>
 
-            {/* <section className='sec_6'>
+            <section className='sec_6'>
                 <div className='container'>
                     <div className='row'>
                         <div className='col-lg-4'>
 
                         </div>
                         <div className='col-lg-4'>
-                            <img src={dubai_2} alt="" />
+                            <img src={""} alt="" />
                         </div>
                         <div className='col-lg-4'>
 
                         </div>
                     </div>
                 </div>
-            </section> */}
+            </section>
 
         </>
     )
