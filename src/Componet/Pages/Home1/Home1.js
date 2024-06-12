@@ -33,8 +33,10 @@ import slider_img from '../../Images/pv1.webp';
 import slider_img2 from '../../Images/pv2.webp';
 import slider_img3 from '../../Images/pv3.webp';
 import slider_img4 from '../../Images/pv5.webp';
-import { FaArrowLeftLong } from 'react-icons/fa6';
 import Modal from 'react-modal';
+import dubai_2 from '../../Images/ft1.webp';
+import chef from '../../Images/ftv1.webp';
+
 
 
 const Home1 = () => {
@@ -435,15 +437,63 @@ const Home1 = () => {
 
             <section className='sec_6'>
                 <div className='container'>
-                    <div className='row'>
-                        <div className='col-lg-4'>
-
+                    <div className='row '>
+                        <div className='col-lg-5'>
+                           <div className='mt-5'>
+                           <div className='d-flex justify-content-center justify-content-md-start'>
+                                <Kown />
+                            </div>
+                            <p className='travel mb-5 black_color text-center text-md-start  urbanist'>Travel place for Your & your Family</p>
+                            <div className='mb-3 mt-4 mt-md-0'>
+                                <ul className='d-flex mb-0 p-0 ms-3 justify-content-center justify-content-md-start'>
+                                    <li className='testers'>
+                                        <img src={test} className='tester_img' alt="" />
+                                    </li>
+                                    <li className='testers'>
+                                        <img src={test2} className='tester_img' alt="" />
+                                    </li>
+                                    <li className='testers'>
+                                        <img src={test3} className='tester_img' alt="" />
+                                    </li>
+                                    <li className='testers'>
+                                        <img src={test4} className='tester_img' alt="" />
+                                    </li>
+                                    <li className='testers'>
+                                        50+
+                                    </li>
+                                </ul>
+                            </div>
+                            <p className='black_color customer text-center text-md-start'>500K+ Happy Customer</p>
+                           </div>
                         </div>
-                        <div className='col-lg-4'>
-                            <img src={""} alt="" />
-                        </div>
-                        <div className='col-lg-4'>
-
+                        <div className='col-lg-7'>
+                            <div className='d-flex left_main gap-5'>
+                                <div className='dubai_img_main'>
+                                    <img src={dubai_2} alt="" className='dubai_img' />
+                                </div>
+                                <div className='mt-5'>
+                                    <p className='adventures black_color urbanist'>Waiting for adventures? Don’t miss them</p>
+                                    <p className='dummy black_color urbanist'>We don’t just work with concrete and steel. We are Approachable, with even our highest concrete and steel. We work with people</p>
+                                    <div className='exp_main d-flex align-items-center gap-2 mb-4'>
+                                        <img src={chef} className='' alt="" />
+                                        <p className='black_color urbanist exp'>We Have More than 10 year of experience</p>
+                                    </div>
+                                    <div>
+                                        <div className='d-flex mb-2'>
+                                            <span><FaCheckCircle color='blue' className='fs-4 me-3' /></span>
+                                            <span className='fw-bold  urbanist fs-5'>Generation Technology</span>
+                                        </div>
+                                        <div className='d-flex mb-2'>
+                                            <span><FaCheckCircle color='blue' className='fs-4 me-3' /></span>
+                                            <span className='fw-bold  urbanist fs-5'>Generation Technology</span>
+                                        </div>
+                                        <div className='d-flex'>
+                                            <span><FaCheckCircle color='blue' className='fs-4 me-3' /></span>
+                                            <span className='fw-bold  urbanist fs-5'>Audio Performance</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

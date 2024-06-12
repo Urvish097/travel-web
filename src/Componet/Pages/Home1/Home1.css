@@ -819,6 +819,9 @@
         font-size: 50px !important;
     }
 
+    .sec_6 .travel {
+        font-size: 50px !important;
+    }
 }
 
 @media (min-width:476px) and (max-width:762px) {
@@ -829,11 +832,22 @@
     .sec_5 .explore {
         font-size: 40px !important;
     }
+
+    .sec_6 .travel {
+        font-size: 40px !important;
+    }
 }
+
 
 @media (min-width:100px) and (max-width:476px) {
     .sec_4 .offer {
         font-size: 32px;
+    }
+
+    .sec_6 .travel {
+        font-size: 32px !important;
+        width: 100% !important;
+        margin: 0 auto !important;
     }
 
     .sec_5 .explore {
@@ -954,31 +968,34 @@
 }
 
 @media (max-width:767px) {
-    .photo_view{
+    .photo_view {
         flex-wrap: wrap;
         padding: 20px 30px !important;
-    }   
+    }
 }
+
 @media (max-width:477px) {
-    .sec_5 .photo_view_inner{
+    .sec_5 .photo_view_inner {
         justify-content: center !important;
     }
+
     .sec_5 .inner_1 p {
         color: #d3d3d3;
         font-size: 17px;
         text-align: center;
     }
 }
+
 @media (max-width:376px) {
-    .sec_5 .inner_1 h3{
+    .sec_5 .inner_1 h3 {
         font-size: 20px;
     }
 }
 
 /* *****************sec_6******** */
 
-.sec_6{
-    padding: 50px 0px;
+.sec_6 {
+    padding: 60px 0px;
 }
 
 .ReactModal__Overlay {
@@ -990,7 +1007,7 @@
     border: none !important;
     padding: 0 !important;
 }
-   
+
 .ReactModal__Content img {
     width: 100%;
     height: auto;
@@ -1001,8 +1018,8 @@
     .ReactModal__Content {
         max-width: 95%;
         max-height: 95%;
-        }
-        
+    }
+
     .ReactModal__Content img {
         max-height: 70vh;
     }
@@ -1019,5 +1036,115 @@
 
     .ReactModal__Content img {
         max-height: 60vh;
+    }
+}
+
+.sec_6 .dubai_img_main {
+    width: 337px;
+    border-radius: 200px;
+    margin-left: -41px;
+}
+
+.sec_6 .travel {
+    font-size: 60px;
+    font-weight: 900;
+    line-height: normal;
+    max-width: 90%;
+}
+
+.sec_6 .testers {
+    color: #fff;
+    width: 38px;
+    height: 38px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    overflow: hidden;
+    line-height: 38px;
+    justify-content: center;
+    align-items: center;
+    margin-left: -16px;
+    text-align: center;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    background-color: #002966;
+}
+
+.sec_6 .tester_img {
+    height: auto;
+    max-width: 100%;
+}
+
+.sec_6 .customer {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.sec_6 .adventures {
+    font-size: 26px;
+    font-weight: bold;
+    max-width: 80%;
+    line-height: 1.2;
+}
+
+.sec_6 .dummy {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.sec_6 .exp_main {
+    box-shadow: 0px 11px 40px 0px rgba(0, 0, 0, 0.04);
+    background-color: rgb(255, 255, 255);
+    max-width: 365px;
+    margin-left: -100px;
+    border-radius: 100px;
+    padding: 20px 40px;
+}
+
+.sec_6 .exp {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.sec_6 .dubai_img {
+    border-radius: 200px;
+}
+
+@media (max-width:1200px) {
+    .left_main {
+        flex-wrap: wrap;
+    }
+
+    .dubai_img_main {
+        display: flex;
+        justify-content: end;
+        margin: 0;
+        width: 100% !important;
+    }
+
+    .sec_6 .exp_main {
+        margin-left: 0;
+    }
+}
+
+@media (max-width:1000px) {
+    .dubai_img_main {
+        justify-content: center;
+        margin: 0 !important;
+    }
+}
+
+@media (max-width:500px) {
+    .dubai_img {
+        width: 300px !important;
+    }
+}
+
+@media (max-width:992px) {
+    .sec_6 .travel {
+        width: 100% !important;
     }
 }
