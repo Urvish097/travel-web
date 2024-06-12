@@ -5,6 +5,8 @@ import italy from '../Images/italy.webp';
 import usa from '../Images/usa.webp';
 import { CiPlay1 } from "react-icons/ci";
 import { IoIosLink } from "react-icons/io";
+import dubai from '../Images/dubai.webp';
+import canada from '../Images/canada.webp';
 
 export const navbar = [
     {
@@ -124,6 +126,53 @@ export const Travel_card = [
         Price: "$90000",
         Time: "7 days Trip",
         img: usa,
+        icon: <FaLocationArrow className="me-3"/>,
+        link_icon: <IoIosLink />,
+        video_icon: <CiPlay1 />
+    },
+]
+export const Travel_card_2 = [
+    {
+        name: "Rome, Italty",
+        Price: "$83000",
+        Time: "96 days Trip",
+        img: italy,
+        icon: <FaLocationArrow className="me-3"/>,
+        link_icon: <IoIosLink />,
+        video_icon: <CiPlay1 />
+    },
+    {
+        name: "Paris, France",
+        Price: "$79000",
+        Time: "192 days Trip",
+        img: paris,
+        icon: <FaLocationArrow className="me-3"/>,
+        link_icon: <IoIosLink />,
+        video_icon: <CiPlay1 />
+    },
+    {
+        name: "New York, USA",
+        Price: "$90000",
+        Time: "168 days Trip",
+        img: usa,
+        icon: <FaLocationArrow className="me-3"/>,
+        link_icon: <IoIosLink />,
+        video_icon: <CiPlay1 />
+    },
+    {
+        name: "Dubai, Emirates",
+        Price: "$56000",
+        Time: "312 days Trip",
+        img: dubai,
+        icon: <FaLocationArrow className="me-3"/>,
+        link_icon: <IoIosLink />,
+        video_icon: <CiPlay1 />
+    },
+    {
+        name: "Toronto, Canada",
+        Price: "$89000",
+        Time: "240 days Trip",
+        img: canada,
         icon: <FaLocationArrow className="me-3"/>,
         link_icon: <IoIosLink />,
         video_icon: <CiPlay1 />

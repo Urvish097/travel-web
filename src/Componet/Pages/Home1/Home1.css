@@ -319,7 +319,7 @@
     padding: 30px 0px;
 }
 
-.sec_2 .Destinantions {
+.Destinantions {
     font-size: 60px;
 }
 
@@ -494,7 +494,7 @@
 
 @media (max-width:500px) {
 
-    .sec_2 .Destinantions {
+    .Destinantions {
         font-size: 40px;
     }
 }
@@ -1147,4 +1147,14 @@
     .sec_6 .travel {
         width: 100% !important;
     }
+}
+
+/* *******************sec-7****************** */
+
+.sec_7 {
+    padding: 50px 0px;
+}
+
+.sec_7 .caar_2 {
+    width: 390px;
 }

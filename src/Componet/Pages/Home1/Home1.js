@@ -36,7 +36,8 @@ import slider_img4 from '../../Images/pv5.webp';
 import Modal from 'react-modal';
 import dubai_2 from '../../Images/ft1.webp';
 import chef from '../../Images/ftv1.webp';
-
+import { Travel_card_2 } from '../../Data/Data'
+import Card_2 from '../../Card2/Card_2';
 
 
 const Home1 = () => {
@@ -49,7 +50,7 @@ const Home1 = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
 
-    const settings = {
+    var settings = {
         dots: false,
         infinite: true,
         autoplaySpeed: 3000,
@@ -62,6 +63,59 @@ const Home1 = () => {
             resetProgressBar();
         }
     };
+
+    var Slider2 = {
+        slidesToShow: 3.5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 8000,
+        infinite:true,
+        pauseOnHover:true,
+        mobileFirst:true,
+        cssEase: 'linear',
+        responsive: [
+            {
+                breakpoint: 1377,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 1187,
+                settings: {
+                    slidesToShow: 2.5,
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow:1.5,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow:1,
+                }
+            },
+            {
+                breakpoint: 385,
+                settings: {
+                    slidesToShow:0.5,
+                }
+            },
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    }
 
     const resetProgressBar = () => {
         const progressBar = progressBarRef.current;
@@ -439,32 +493,32 @@ const Home1 = () => {
                 <div className='container'>
                     <div className='row '>
                         <div className='col-lg-5'>
-                           <div className='mt-5'>
-                           <div className='d-flex justify-content-center justify-content-md-start'>
-                                <Kown />
+                            <div className='mt-5'>
+                                <div className='d-flex justify-content-center justify-content-md-start'>
+                                    <Kown />
+                                </div>
+                                <p className='travel mb-5 black_color text-center text-md-start  urbanist'>Travel place for Your & your Family</p>
+                                <div className='mb-3 mt-4 mt-md-0'>
+                                    <ul className='d-flex mb-0 p-0 ms-3 justify-content-center justify-content-md-start'>
+                                        <li className='testers'>
+                                            <img src={test} className='tester_img' alt="" />
+                                        </li>
+                                        <li className='testers'>
+                                            <img src={test2} className='tester_img' alt="" />
+                                        </li>
+                                        <li className='testers'>
+                                            <img src={test3} className='tester_img' alt="" />
+                                        </li>
+                                        <li className='testers'>
+                                            <img src={test4} className='tester_img' alt="" />
+                                        </li>
+                                        <li className='testers'>
+                                            50+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p className='black_color customer text-center text-md-start'>500K+ Happy Customer</p>
                             </div>
-                            <p className='travel mb-5 black_color text-center text-md-start  urbanist'>Travel place for Your & your Family</p>
-                            <div className='mb-3 mt-4 mt-md-0'>
-                                <ul className='d-flex mb-0 p-0 ms-3 justify-content-center justify-content-md-start'>
-                                    <li className='testers'>
-                                        <img src={test} className='tester_img' alt="" />
-                                    </li>
-                                    <li className='testers'>
-                                        <img src={test2} className='tester_img' alt="" />
-                                    </li>
-                                    <li className='testers'>
-                                        <img src={test3} className='tester_img' alt="" />
-                                    </li>
-                                    <li className='testers'>
-                                        <img src={test4} className='tester_img' alt="" />
-                                    </li>
-                                    <li className='testers'>
-                                        50+
-                                    </li>
-                                </ul>
-                            </div>
-                            <p className='black_color customer text-center text-md-start'>500K+ Happy Customer</p>
-                           </div>
                         </div>
                         <div className='col-lg-7'>
                             <div className='d-flex left_main gap-5'>
@@ -496,6 +550,24 @@ const Home1 = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section className='sec_7'>
+                <div className='container'>
+                    <div className='d-flex justify-content-center'>
+                        <Kown />
+                    </div>
+                    <h1 className='black_color fw-bold text-center Destinantions urbanist' data-aos="zoom-in-left">Top Destinantions</h1>
+                </div>
+                <div className='sec_2'>
+                    <Slider {...Slider2} className='overflow-hidden'>
+                        {Travel_card_2.map((item) => (
+                            <div>
+                                <Card_2 Travel_card_={item} />
+                            </div>
+                        ))}
+                    </Slider>
                 </div>
             </section>
 
