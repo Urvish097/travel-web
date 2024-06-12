@@ -71,6 +71,7 @@ const Home1 = () => {
         autoplaySpeed: 0,
         speed: 8000,
         infinite:true,
+        loop :true,
         pauseOnHover:true,
         mobileFirst:true,
         cssEase: 'linear',
@@ -108,7 +109,7 @@ const Home1 = () => {
             {
                 breakpoint: 385,
                 settings: {
-                    slidesToShow:0.5,
+                    slidesToShow:0.7,
                 }
             },
             // You can unslick at a given breakpoint now by adding:
