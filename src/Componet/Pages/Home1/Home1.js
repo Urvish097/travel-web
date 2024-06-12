@@ -109,7 +109,7 @@ const Home1 = () => {
             {
                 breakpoint: 385,
                 settings: {
-                    slidesToShow:0.7,
+                    slidesToShow:0.8,
                 }
             },
             // You can unslick at a given breakpoint now by adding:
