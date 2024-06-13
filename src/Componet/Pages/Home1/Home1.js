@@ -38,6 +38,8 @@ import dubai_2 from '../../Images/ft1.webp';
 import chef from '../../Images/ftv1.webp';
 import { Travel_card_2 } from '../../Data/Data'
 import Card_2 from '../../Card2/Card_2';
+import Package_card from '../../Holiday_Package_Card/Package_card';
+import { price_card } from '../../Data/Data';
 
 
 const Home1 = () => {
@@ -70,10 +72,10 @@ const Home1 = () => {
         autoplay: true,
         autoplaySpeed: 0,
         speed: 8000,
-        infinite:true,
-        loop :true,
-        pauseOnHover:true,
-        mobileFirst:true,
+        infinite: true,
+        loop: true,
+        pauseOnHover: true,
+        mobileFirst: true,
         cssEase: 'linear',
         responsive: [
             {
@@ -97,24 +99,21 @@ const Home1 = () => {
             {
                 breakpoint: 800,
                 settings: {
-                    slidesToShow:1.5,
+                    slidesToShow: 1.5,
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow:1,
+                    slidesToShow: 1,
                 }
             },
             {
                 breakpoint: 385,
                 settings: {
-                    slidesToShow:0.8,
+                    slidesToShow: 0.8,
                 }
             },
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
         ]
     }
 
@@ -569,6 +568,26 @@ const Home1 = () => {
                             </div>
                         ))}
                     </Slider>
+                </div>
+            </section>
+
+            <section className='sec_8'>
+                <div className='bg_price'>
+                    <div className='container-fluid container-xl'>
+                        <div className='trip_pacage mb-4'>
+                            <div className='d-flex justify-content-center '>
+                                <Kown />
+                            </div>
+                            <h1 className='black_color fw-bold text-center Destinantions urbanist' data-aos="zoom-in-left">Best Holiday Package</h1>
+                        </div>
+                        <div className='row'>
+                            {price_card.map((item) => (
+                                <div className='col-md-6 col-lg-6 col-xl-4 mb-5'>
+                                    <Package_card Package={item} />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </section>
 
