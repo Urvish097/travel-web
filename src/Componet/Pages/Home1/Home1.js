@@ -40,7 +40,8 @@ import { Travel_card_2 } from '../../Data/Data'
 import Card_2 from '../../Card2/Card_2';
 import Package_card from '../../Holiday_Package_Card/Package_card';
 import { price_card } from '../../Data/Data';
-
+import tajmahel from '../../Images/blg1.webp';
+import Button_2 from '../../Button/Button_2';
 
 const Home1 = () => {
 
@@ -591,6 +592,22 @@ const Home1 = () => {
                 </div>
             </section>
 
+            <section className='sec_9'>
+                <div className='container-xl container-fluid'>
+                    <div className='blog position-relative'>
+                        <div>
+                            <img src={tajmahel} className='w-100' alt="" />
+                        </div>
+                        <div className='d-flex justify-content-center align-items-center blog_text_main'>
+                            <div className='blog_text'>
+                                <h3 className='text-white blog_text urbanist mb-3'>Latest News & Articles From the Blog Posts</h3>
+                                <p className='urbanist'>We're an award-winning, forward thinking, boutique digital & creative agency located in Edmonton, Canada.</p>
+                                <Button_2 />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }

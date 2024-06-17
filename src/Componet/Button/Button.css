@@ -1,4 +1,4 @@
-.button--telesto {
+.btn_1 .button--telesto {
     overflow: hidden;
     color: #fff !important;
     background: white;
@@ -19,24 +19,24 @@
     /* Remove transition to prevent background change */
 }
 
-.button--telesto span {
+.btn_1 .button--telesto span {
     display: block;
     position: relative;
     z-index: 1;
 }
 
-.button--telesto>span {
+.btn_1 .button--telesto>span {
     overflow: hidden;
 }
 
 /* .button--telesto:hover > span > span {
     animation: MoveRightInitial 0.1s forwards, MoveRightEnd 0.3s forwards 0.2s;
 } */
-.button--telesto .leter_rotate span {
+.btn_1 .button--telesto .leter_rotate span {
     transition: transform 0.5s ease-in-out;
 }
 
-.button--telesto:hover .leter_rotate span {
+.btn_1 .button--telesto:hover .leter_rotate span {
     animation: gt-spin 1s forwards;
 }
 
@@ -57,47 +57,47 @@
 }
 
 /* Apply animation delays to each letter */
-.button--telesto:hover .leter_rotate span:nth-child(1) {
+.btn_1 .button--telesto:hover .leter_rotate span:nth-child(1) {
     animation-delay: 0.1s;
 }
 
-.button--telesto:hover .leter_rotate span:nth-child(2) {
+.btn_1 .button--telesto:hover .leter_rotate span:nth-child(2) {
     animation-delay: 0.2s;
 }
 
-.button--telesto:hover .leter_rotate span:nth-child(3) {
+.btn_1 .button--telesto:hover .leter_rotate span:nth-child(3) {
     animation-delay: 0.3s;
 }
 
-.button--telesto:hover .leter_rotate span:nth-child(4) {
+.btn_1 .button--telesto:hover .leter_rotate span:nth-child(4) {
     animation-delay: 0.4s;
 }
 
-.button--telesto:hover .leter_rotate span:nth-child(5) {
+.btn_1 .button--telesto:hover .leter_rotate span:nth-child(5) {
     animation-delay: 0.5s;
 }
 
-.button--telesto:hover .leter_rotate span:nth-child(6) {
+.btn_1 .button--telesto:hover .leter_rotate span:nth-child(6) {
     animation-delay: 0.6s;
 }
 
-.button--telesto:hover .leter_rotate span:nth-child(7) {
+.btn_1 .button--telesto:hover .leter_rotate span:nth-child(7) {
     animation-delay: 0.7s;
 }
 
-.button--telesto:hover .leter_rotate span:nth-child(8) {
+.btn_1 .button--telesto:hover .leter_rotate span:nth-child(8) {
     animation-delay: 0.8s;
 }
 
-.button--telesto:hover .leter_rotate span:nth-child(9) {
+.btn_1 .button--telesto:hover .leter_rotate span:nth-child(9) {
     animation-delay: 0.9s;
 }
 
-.button--telesto:hover .leter_rotate span:nth-child(10) {
+.btn_1 .button--telesto:hover .leter_rotate span:nth-child(10) {
     animation-delay: 1s;
 }
 
-.button--telesto:hover .leter_rotate span:nth-child(11) {
+.btn_1 .button--telesto:hover .leter_rotate span:nth-child(11) {
     animation-delay: 1.1s;
 }
 
@@ -119,56 +119,96 @@
     }
 }
 
-.button--telesto::before,
-.button--telesto::after {
+.btn_1 .button--telesto::before,
+.btn_1 .button--telesto::after {
     content: '';
     background: #5b00f0;
     /* Keep the same background color */
 }
 
-.button--telesto::before {
+.btn_1 .button--telesto::before {
     width: 135%;
     transform: translate3d(-100%, 0, 0);
     background: #5b00f0;
     /* Ensure color doesn't change on hover */
 }
 
-.button--telesto:hover::before {
+.btn_1 .button--telesto:hover::before {
     transform: translate3d(0, 0, 0);
     transition: transform 0.3s;
     border-radius: 50px;
 }
 
-.button--telesto::after {
+.btn_1 .button--telesto::after {
     width: 105%;
     transform: translate3d(100%, 0, 0);
     transition: transform 1s cubic-bezier(0.7, 0, 0.2, 1);
     border-radius: 50px;
 }
 
-.button--telesto:hover::after {
+.btn_1 .button--telesto:hover::after {
     transform: translate3d(0, 0, 0);
     border-radius: 50px;
     transition: transform 0.01s 0.3s cubic-bezier(0.7, 0, 0.2, 1);
 }
 
-.content__item {
+.btn_1 .content__item {
     list-style-type: none;
 }
 
-.content__item::before {
+.btn_1 .content__item::before {
     position: absolute;
     top: 0;
     left: 0;
 }
 
-.button {
+.btn_1 .button {
     pointer-events: auto;
     cursor: pointer;
     background: #363539;
     border: none;
     padding: 17px 40px 17px 40px;
     margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.btn_1 .button::before,
+.btn_1 .button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width:770px) {
+
+    .btn_1 .button {
+        padding: 15px 30px 15px 30px;
+    }
+
+    .btn_1 .button--telesto {
+        font-size: 16px;
+    }
+}
+
+/* ***********************btn-1*********** */
+
+.content__item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.button {
+    cursor: pointer;
+    background: white;
+    border: none;
+    padding: 1.2rem 3rem;
+    margin: 0;
+    font-family: "Urbanist", sans-serif;
     position: relative;
     display: inline-block;
 }
@@ -182,13 +222,29 @@
     height: 100%;
 }
 
-@media (max-width:770px) {
+.button--pan {
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 3rem;
+    overflow: hidden;
+    color: #fff;
+}
 
-    .button {
-        padding: 15px 30px 15px 30px;
-    }
+.button--pan:hover {
+    color: #363539;
+}
 
-    .button--telesto {
-        font-size: 16px;
-    }
+.button--pan span {
+    position: relative;
+}
+
+.button--pan::before {
+    content: '';
+    background: linear-gradient(90deg, rgb(67, 0, 231) 0%, rgb(125, 0, 252) 100%);
+    transition: transform 0.5s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.button--pan:hover::before {
+    transform: translate3d(0, -100%, 0);
 }
