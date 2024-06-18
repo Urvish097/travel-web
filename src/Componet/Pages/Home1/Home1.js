@@ -42,6 +42,8 @@ import Package_card from '../../Holiday_Package_Card/Package_card';
 import { price_card } from '../../Data/Data';
 import tajmahel from '../../Images/blg1.webp';
 import Button_2 from '../../Button/Button_2';
+import Team_card from '../../Team_card/Team_card';
+import { team_card } from "../../Data/Data";
 
 const Home1 = () => {
 
@@ -581,7 +583,7 @@ const Home1 = () => {
                             </div>
                             <h1 className='black_color fw-bold text-center Destinantions urbanist' data-aos="zoom-in-left">Best Holiday Package</h1>
                         </div>
-                        <div className='row'>
+                        <div className='row justify-content-center'>
                             {price_card.map((item) => (
                                 <div className='col-md-6 col-lg-6 col-xl-4 mb-5'>
                                     <Package_card Package={item} />
@@ -594,7 +596,7 @@ const Home1 = () => {
 
             <section className='sec_9'>
                 <div className='container-xl container-fluid'>
-                    <div className='blog position-relative'>
+                    <div className='blog position-relative mb-5'>
                         <div>
                             <img src={tajmahel} className='w-100' alt="" />
                         </div>
@@ -606,10 +608,15 @@ const Home1 = () => {
                             </div>
                         </div>
                     </div>
+                    <div className='row justify-content-center'>
+                        {team_card.map((item) => (
+                        <div className='col-md-6 col-lg-4'>
+                            <Team_card team={item} />
+                        </div>
+                        ))}
+                    </div>
                 </div>
             </section>
-
-            
         </>
     )
 }

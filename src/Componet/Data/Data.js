@@ -13,6 +13,7 @@ import price3 from '../Images/price-3.webp';
 import price4 from '../Images/price-4.webp';
 import price5 from '../Images/price-5.webp';
 import price6 from '../Images/price-6.webp';
+import team_image from '../Images/team.jpeg';
 
 export const navbar = [
     {
@@ -186,44 +187,68 @@ export const Travel_card_2 = [
     },
 ]
 
-export const price_card =[
+export const price_card = [
     {
-        price:'99',
-        time:"/month",
-        img_1:price1,
-        img_2:price2,
-        place:'Turkey Tour',
-        dis:"We dont't just work concert We are Appoachable",
-        techo:"Generation Technology",
-        techo2:"Audio Performance",
-        techo3:"Generation Technology",
-        techo4:"Generation Technology",
-        btn:"Get Started"
+        price: '99',
+        time: "/month",
+        img_1: price1,
+        img_2: price2,
+        place: 'Turkey Tour',
+        dis: "We dont't just work concert We are Appoachable",
+        techo: "Generation Technology",
+        techo2: "Audio Performance",
+        techo3: "Generation Technology",
+        techo4: "Generation Technology",
+        btn: "Get Started"
     },
     {
-        price:'79',
-        time:"/month",
-        img_1:price3,
-        img_2:price4,
-        place:'Full Travel',
-        dis:"We dont't just work concert We are Appoachable",
-        techo:"Generation Technology",
-        techo2:"Generation Technology",
-        techo3:"Audio Performance",
-        techo4:"Generation Technology",
-        btn:"Get Started"
+        price: '79',
+        time: "/month",
+        img_1: price3,
+        img_2: price4,
+        place: 'Full Travel',
+        dis: "We dont't just work concert We are Appoachable",
+        techo: "Generation Technology",
+        techo2: "Generation Technology",
+        techo3: "Audio Performance",
+        techo4: "Generation Technology",
+        btn: "Get Started"
     },
     {
-        price:'49',
-        time:"/month",
-        img_1:price5,
-        img_2:price6,
-        place:'World Tour',
-        dis:"We dont't just work concert We are Appoachable",
-        techo:"Generation Technology",
-        techo2:"Generation Technology",
-        techo3:"Audio Performance",
-        techo4:"Generation Technology",
-        btn:"Get Started"
+        price: '49',
+        time: "/month",
+        img_1: price5,
+        img_2: price6,
+        place: 'World Tour',
+        dis: "We dont't just work concert We are Appoachable",
+        techo: "Generation Technology",
+        techo2: "Generation Technology",
+        techo3: "Audio Performance",
+        techo4: "Generation Technology",
+        btn: "Get Started"
+    }
+]
+
+export const team_card = [
+    {
+        Date: "June 16, 2024",
+        Location: "Beach Days, Long Hikes, And",
+        Dummy_text: "Non libero hac commodo torquent finibus metus. Duis in nisi diam nunc habitasse lorem elit. Ante porta accumsan sociosqu faucibus",
+        Name:"By Emma Mark",
+        Img:team_image
+    },
+    {
+        Date: "June 16, 2024",
+        Location: "Island Hopping And Weather Tips",
+        Dummy_text: "Non libero hac commodo torquent finibus metus. Duis in nisi diam nunc habitasse lorem elit. Ante porta accumsan sociosqu faucibus",
+        Name:"By Emma Mark",
+        Img:team_image
+    },
+    {
+        Date: "June 16, 2024",
+        Location: "Assertively iterate resource maximizing",
+        Dummy_text: "Non libero hac commodo torquent finibus metus. Duis in nisi diam nunc habitasse lorem elit. Ante porta accumsan sociosqu faucibus",
+        Name:"By Emma Mark",
+        Img:team_image
     }
 ]

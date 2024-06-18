@@ -1299,11 +1299,12 @@ sup {
         padding: 30px 20px;
         background-color: rgb(0, 0, 0);
     }
+
     .sec_9 .blog_text {
         max-width: 100%;
         margin: 0 auto;
     }
-    
+
 }
 
 @media (min-width:992px) and (max-width:1200px) {
@@ -1315,8 +1316,65 @@ sup {
         font-size: 40px;
     }
 }
+
 @media (min-width:100px) and (max-width:400px) {
     .sec_9 .blog_text h3 {
         font-size: 35px;
+    }
+}
+
+.team_card .team_bg_color {
+    border-radius: 20px;
+    padding: 45px 40px 40px;
+    background-color: #f1ebe4;
+}
+
+.team_card .date {
+    color: #535ee0;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.team_card .plce {
+    color: #183153;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.team_card .dummy_text {
+    font-size: 18px;
+    color: #363539;
+}
+
+.team_card .name {
+    color: #535ee0;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.team_card .team_img {
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.team_card .plce {
+    background-image: linear-gradient(transparent calc(100% - 1px), currentColor 1px);
+    display: inline !important;
+    background-position-y: -1px;
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.team_card .plce:hover {
+    background-size: 100% 100%;
+}
+
+@media (max-width:400px) {
+    .team_card .plce {
+        font-size: 22px;;
+    }
+    .team_card .team_bg_color {
+        padding: 45px 30px 40px;
     }
 }
