@@ -44,6 +44,12 @@ import tajmahel from '../../Images/blg1.webp';
 import Button_2 from '../../Button/Button_2';
 import Team_card from '../../Team_card/Team_card';
 import { team_card } from "../../Data/Data";
+import sp1 from '../../Images/sp1.webp';
+import sp2 from '../../Images/sp2.webp';
+import sp3 from '../../Images/sp3.webp';
+import sp4 from '../../Images/sp4.webp';
+import sp5 from '../../Images/sp5.webp';
+import sp6 from '../../Images/sp6.webp';
 
 const Home1 = () => {
 
@@ -117,6 +123,37 @@ const Home1 = () => {
                     slidesToShow: 0.8,
                 }
             },
+        ]
+    }
+
+    var slider3 = {
+        autoplaySpeed: 3000,
+        autoplay: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
         ]
     }
 
@@ -610,10 +647,40 @@ const Home1 = () => {
                     </div>
                     <div className='row justify-content-center'>
                         {team_card.map((item) => (
-                        <div className='col-md-6 col-lg-4'>
-                            <Team_card team={item} />
-                        </div>
+                            <div className='col-md-6 col-lg-4'>
+                                <Team_card team={item} />
+                            </div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className='sec_10'>
+                <div className='company_bg'>
+                    <div className='container-lg container-fluid'>
+                        <h3 className='urbanist mb-5 local_bus black_color text-center'>Trusted By local businesses</h3>
+                        <div className=''>
+                            <Slider {...slider3}>
+                                <div>
+                                    <img src={sp1} className='mx-auto' alt="" />
+                                </div>
+                                <div>
+                                    <img src={sp2} className='mx-auto' alt="" />
+                                </div>
+                                <div>
+                                    <img src={sp3} className='mx-auto' alt="" />
+                                </div>
+                                <div>
+                                    <img src={sp4} className='mx-auto' alt="" />
+                                </div>
+                                <div>
+                                    <img src={sp5} className='mx-auto' alt="" />
+                                </div>
+                                <div>
+                                    <img src={sp6} className='mx-auto' alt="" />
+                                </div>
+                            </Slider>
+                        </div>
                     </div>
                 </div>
             </section>

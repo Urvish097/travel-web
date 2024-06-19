@@ -822,18 +822,24 @@
     .sec_6 .travel {
         font-size: 50px !important;
     }
+    .sec_10 .local_bus {
+        font-size: 50px !important;
+    }
 }
 
 @media (min-width:476px) and (max-width:762px) {
     .sec_4 .offer {
         font-size: 40px;
     }
-
+    
     .sec_5 .explore {
         font-size: 40px !important;
     }
-
+    
     .sec_6 .travel {
+        font-size: 40px !important;
+    }
+    .sec_10 .local_bus {
         font-size: 40px !important;
     }
 }
@@ -843,14 +849,17 @@
     .sec_4 .offer {
         font-size: 32px;
     }
-
+    
     .sec_6 .travel {
         font-size: 32px !important;
         width: 100% !important;
         margin: 0 auto !important;
     }
-
+    
     .sec_5 .explore {
+        font-size: 32px !important;
+    }
+    .sec_10 .local_bus {
         font-size: 32px !important;
     }
 }
@@ -1361,6 +1370,7 @@ sup {
     background-image: linear-gradient(transparent calc(100% - 1px), currentColor 1px);
     display: inline !important;
     background-position-y: -1px;
+    line-height: normal;
     background-repeat: no-repeat;
     background-size: 0 100%;
     transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -1368,13 +1378,37 @@ sup {
 
 .team_card .plce:hover {
     background-size: 100% 100%;
+    cursor: pointer;
 }
 
 @media (max-width:400px) {
     .team_card .plce {
-        font-size: 22px;;
+        font-size: 22px;
+        ;
     }
+
     .team_card .team_bg_color {
         padding: 45px 30px 40px;
     }
+}
+
+
+/* **********************sec_10************** */
+
+.sec_10 .company_bg {
+    background-color: #F7FFC4;
+    padding: 100px 0px;
+}
+
+.sec_10 .local_bus {
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.sec_10 .slick-next {
+    display: none !important;
+}
+
+.sec_10 .slick-prev {
+    display: none !important;
 }
