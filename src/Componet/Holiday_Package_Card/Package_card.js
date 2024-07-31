@@ -1,6 +1,4 @@
 import React from 'react';
-import price1 from '../Images/price-1.webp';
-import price2 from '../Images/price-2.webp';
 import { FaCheckCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 

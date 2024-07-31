@@ -8,7 +8,7 @@ import Header from "../../Header/Header"
 import Button from '../../Button/Button';
 import { FaArrowLeft, FaArrowRight, FaCalendarAlt, FaCheckCircle, FaPlay, FaSwimmer } from "react-icons/fa";
 import { IoAirplane, IoClose, IoLocationSharp } from 'react-icons/io5';
-import { IoIosSearch } from 'react-icons/io';
+import { IoIosArrowUp, IoIosSearch } from 'react-icons/io';
 import Card from '../../Card/Card';
 import { Travel_card } from '../../Data/Data';
 import airplane from '../../Images/icon1.webp';
@@ -50,6 +50,7 @@ import sp3 from '../../Images/sp3.webp';
 import sp4 from '../../Images/sp4.webp';
 import sp5 from '../../Images/sp5.webp';
 import sp6 from '../../Images/sp6.webp';
+import ReviewsSlider from '../../Slider/ReviewsSlider';
 
 const Home1 = () => {
 
@@ -182,9 +183,35 @@ const Home1 = () => {
         document.body.classList.remove('modal-open'); // Enable scrolling
     };
 
+    const scrollToTop = () => {
+        window.scrollTo(0, 0)
+    };
+
+    const [isVisible, setIsVisible] = useState(false);
+
+    const toggleVisibility = () => {
+        if (window.pageYOffset > 250) {
+            setIsVisible(true);
+        } else {
+            setIsVisible(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', toggleVisibility);
+        return () => {
+            window.removeEventListener('scroll', toggleVisibility);
+        };
+    }, []);
 
     return (
         <>
+            {isVisible && (
+                <div className='scroll_btn d-flex justify-content-center align-items-center' onClick={scrollToTop}>
+                    <IoIosArrowUp className='text-white fs-3' />
+                </div>
+            )}
+
             <section className='sec_1 position-relative'>
                 <div className='position-relative overflow-hidden baner_main'>
                     <Header />
@@ -684,8 +711,35 @@ const Home1 = () => {
                     </div>
                 </div>
             </section>
+
+            <section className='sec_11 position-relative'>
+                <div className='position-relative'>
+                    <div className='bg_shape'> </div>
+                    <div className='bg_shape_2'> </div>
+                    <div className='container'>
+                        <div className=''>
+                            <div className='row'>
+                                <div className='col-lg-5'>
+                                    <div className='text-main'>
+                                        <div className='mb-2'>
+                                            <Kown />
+                                        </div>
+                                        <h3 className='urbanist black_color about'>What People Say About Us</h3>
+                                        <p className='black_color urbanist dummy_text mb-4'>We don’t just work with concrete and steel. We are Approachable, with even our highest concrete and steel. We work with people</p>
+                                        <Button />
+                                    </div>
+                                </div>
+                                <div className='col-lg-6'>
+                                    {/* <ReviewsSlider/> */}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </>
     )
 }
 
-export default Home1
+export default Home1;
